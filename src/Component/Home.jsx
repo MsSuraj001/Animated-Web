@@ -55,10 +55,10 @@ function Home() {
         
         </div> */}
         {/* <img src={img} alt="" className='h-full w-full absolute'/> */}
-        <video src={vid} className='absolute object-cover' autoPlay loop muted></video>
+        <video src={vid} className='absolute object-cover opacity-90' autoPlay loop muted></video>
 
-        <div className='h-[100%] w-[100%] relative z-30' id='main_content'>
-            <nav className='h-20 flex justify-between items-center md:px-16 px-8'>
+        <div className='h-[100%] w-[100%] relative z-30 text-white' id='main_content'>
+            <nav className='h-20 flex justify-between items-center md:px-16 px-8 border-b-2 '>
                 <h1 id='name' className='font-bold text-2xl'>Ms Suraj</h1>
                 <ul className='hidden md:flex gap-6 text-xl menu' id='menu'>
                     <li>Home</li>
@@ -70,7 +70,7 @@ function Home() {
                 <h1 className='text-xl md:hidden menu border-2 px-3 py-1 rounded-md'>Menu</h1>
             </nav>
 
-            <h1 className='relative top-28 sm:top-44 lg:top-72 left-16 text-[18vw] font-semibold text-slate-200' id='Bottom-text'>
+            <h1 className='relative top-28 sm:top-44 lg:top-72 left-16 text-[18vw] font-semibold text-slate-100' id='Bottom-text'>
                 <span>a</span><span>d</span><span>v</span><span>e</span><span>n</span><span>t</span><span>u</span><span>r</span><span>e</span></h1>
         </div>
     </div>
