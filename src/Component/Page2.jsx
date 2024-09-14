@@ -2,16 +2,25 @@ import { useGSAP } from '@gsap/react'
 import React from 'react'
 import { gsap } from 'gsap';
 import adventure_image from '../assets/adventure_image.jpg'
+// import scrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Page2() {
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP( ()=> {
     gsap.from('.left-container h1', {
       y: 50,
-      duration: 1,
+      duration: 2,
       // ease: 'power2.inOut',
       opacity: 0,
-      scrub:2,
-      // stagger:0.5
+      scrollTrigger : {
+        // markers : true,
+        trigger: '.left-container',
+        start: 'top 50%',
+        end: 'bottom 90%',
+        // scrub: true,
+
+      }
     })
   })
   useGSAP( ()=> {
@@ -19,6 +28,13 @@ function Page2() {
       x: 100,
       duration: 2,
       opacity : 0,
+      scrollTrigger : {
+        // markers : true,
+        trigger: 'body',
+        start: 'top 20%',
+        end: 'bottom 90%',
+        scrub: true
+      }
     })
   })
   return (
@@ -31,7 +47,7 @@ function Page2() {
 
         {/* this is the right contianer */}
         <div className='right-contianer flex justify-center px-44 py-5'>
-            <img className='h-[50vh] w-[30vw]' src={adventure_image} alt="" />
+            <img className='h-[50vh] w-[30vw]' src={adventure_image} alt="this is the adventure pic for sec page"/>
         </div>
     </div>
   )
