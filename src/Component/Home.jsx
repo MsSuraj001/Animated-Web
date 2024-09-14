@@ -55,7 +55,7 @@ function Home() {
         
         </div> */}
         {/* <img src={img} alt="" className='h-full w-full absolute'/> */}
-        <video src={vid} className='absolute object-cover' autoPlay loop muted></video>
+        <video src={vid} className='absolute object-cover opacity-.6' autoPlay loop muted></video>
 
         <div className='h-[100%] w-[100%] relative z-30' id='main_content'>
             <nav className='h-20 flex justify-between items-center md:px-16 px-8'>
